@@ -1,0 +1,67 @@
+.metronome-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+  
+.tempo-display {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+  
+.tempo-buttons {
+    display: flex;
+    gap: 10px;
+}
+  
+.start-stop-buttons {
+    margin-top: 10px;
+}
+  
+.start-stop-buttons button {
+    margin-right: 5px;
+}
+.metronome-controls {
+    text-align: center;
+  }
+  
+  .tempo-display {
+    margin-bottom: 10px;
+  }
+  
+  .metronome-container {
+    /* Estilos para centrar el metrónomo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .metronome-bars {
+    width: 100%;
+    height: 10px;
+    background-color: #ccc;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .metronome-bars:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff0000;
+    animation: moveBars 1s linear infinite alternate;
+  }
+  
+  @keyframes moveBars {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(100% - 10px)); /* Ancho total de las barras menos el ancho de las barras */
+    }
+  }
+  

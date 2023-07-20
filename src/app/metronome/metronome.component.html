@@ -1,0 +1,18 @@
+<div class="metronome-controls">
+    <div class="tempo-display">Tempo: {{ tempo }} BPM</div>
+    <div class="tempo-buttons">
+      <button (click)="decreaseTempo()">-</button>
+      <button (click)="increaseTempo()">+</button>
+    </div>
+    <div class="start-stop-buttons">
+      <button (click)="start()" [disabled]="isPlaying">Start</button>
+      <button (click)="stop()" [disabled]="!isPlaying">Stop</button>
+    </div>
+  </div>
+  
+  <div class="metronome-container">
+    <div class="metronome-bars" [style.width]="calculateBarWidth()"></div>
+  </div>
+  
+  
+  
